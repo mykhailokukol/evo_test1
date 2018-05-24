@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Холодильники</title>
+    {% include 'public/bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'public/navbar.html' %}
+    <div class="container" style="padding-top: 5%;">
+      <div class="row">
+        {% for freezer in freezers_list %}
+        <div class="col-sm">
+          <div class="card" style="text-align: center;">
+            <img class="card-img-top" src="{% static 'default_freezer.jpg' %}" alt="photo">
+            <div class="card-body">
+              <h5 class="card-title">{{ freezer }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Цена: {{ freezer.price }} UAH</li>
+              <li class="list-group-item">Цвет: {{ freezer.color }}</li>
+              <li class="list-group-item">
+                <form method="get" action="#">
+                  <a href="{% url 'add_freezer_page' freezer.id %}" onclick="alert('Вы нажали на кнопку.')">Кликов: {{ freezer.clicks }}</a>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

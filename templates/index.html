@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TVs and Freezers</title>
+    {% include 'public/bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'public/navbar.html' %}
+    <div class="container" style="width: 80%; margin-left: 10%; text-align: center; margin-top: 10%;">
+      <h2>Добро пожаловать!</h2>
+      <h4>На этом сайте выполнено Задание 1. "Телевизоры и холодильники"</h4>
+      <p>P.S. логин и пароль для admin-панели - admin:adminpassword</p>
+      <br>
+      <ul style="text-align: left; margin-left: 20%;">
+        <li>Прежде, чем работать с системой необходимо добавить холодильники/телевизоры</li>
+        <li>База данных: PostgreSQL</li>
+        <li><a href="/admin/">admin-панель</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
