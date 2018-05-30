@@ -17,6 +17,9 @@ class Freezer(models.Model):
 
     clicks = models.IntegerField(default=0)
 
+    class Meta:
+        ordering = ['brand']
+
     def __str__(self):
         return ('%s %s' % (self.brand, self.model))
 
@@ -34,6 +37,9 @@ class TV(models.Model):
     color = models.CharField(max_length=32)
 
     clicks = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['brand']
 
     def __str__(self):
         return ('%s %s' % (self.brand, self.model))

@@ -9,6 +9,10 @@
   <body>
     {% include 'public/navbar.html' %}
     <div class="container" style="padding-top: 5%;">
+      <form method="GET">
+        {{ form }}
+        <button type="submit" name="sort-btn" class="btn btn-primary">Сортировать</button>
+      </form>
       <div class="row">
         {% for freezer in freezers_list %}
         <div class="col-sm">

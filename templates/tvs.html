@@ -9,6 +9,10 @@
   <body>
     {% include 'public/navbar.html' %}
     <div class="container" style="padding-top: 5%;">
+      <form method="get">
+        {{ form }}
+        <button type="submit" class="btn btn-primary" name="sort">Сортировать</button>
+      </form>
       <div class="row">
         {% for tv in tvs_list %}
         <div class="col-sm">
